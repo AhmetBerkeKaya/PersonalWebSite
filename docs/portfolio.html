@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Detayı</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./nav.css">
+    <style>
+        /* background */
+        body {
+            background-image: url(../img/vector-NOV-2020-53_generated.jpg);
+            background-size: cover;
+            /* Arka plan resmini kaplayacak şekilde ayarlar */
+            background-repeat: no-repeat;
+            /* Arka plan resminin tekrarlanmasını önler */
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 15%;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: -1;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Arka plan rengi (isteğe bağlı) */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Hafif gölge */
+        }
+
+        .project-box {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: black;">Ahmet Berke Website's</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn" href="./homepage.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" href="./aboutMe.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" href="./portfolio.html">Portföy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn " href="./contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Proje Menüsü -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container" style="background-color:#ccc;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#unity-proje3d">UNITY 3D FPS OYUNU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mobil-proje-flutter">YEMEK SİPARİŞİ UYGULAMASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#yer-istasyonu">DRONE YER İSTASYONU UYGULAMASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#unity-proje">UNITY 2D PLATFORM OYUNU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#unity-proje-mobil">UNITY 3D MOBİL EŞLEŞTİRME OYUNU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#film-proje">FİLM KÜTÜPHANESİ SİSTEMİ UYGULAMASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alan-cevre-proje">ŞEKLİN ALAN-ÇEVRE BİLGİLERİNİ HESAPLAYIP ÇİZEN
+                            PROGRAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hasta-kayit-proje">VERİTABANINA KAYDEDEN HASTA KAYIT UYGULAMASI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Proje -->
+    <div class="container mt-5">
+        <div class="project-box mb-5" id="unity-proje3d">
+            <h2 class="text-center">UNITY 3D PLATFORM OYUNU</h2>
+            <p>
+                Bu proje, pratik amaçlar için geliştirilmiş Unity tabanlı bir oyundur. Oyun mekaniği Half-Life'a benzese
+                de
+                kendi ayırt edici özelliklerine sahiptir. Oyun, mevcut temel formunda daha fazla gelişime açık
+                bırakılmış ve evrim geçirdikçe paylaşılacaktır.
+
+                Hikaye
+                Oyun, mevcut durumunda açıkça belirtilmemiş olsa da bir hikayeye (henüz) sahip değildir.Hikaye henüz tam
+                olarak geliştirilmediği için sonu değişebilir, ancak şu anda aşağıdaki gibi görünmektedir: Bir karakter
+                karşısına çıkan düşmanlarını eline geçtiği silahlarla yok eder. Animasyon ve mixamo'dan alınan karakter
+                yapılarıyla geliştirilebilir bir oyun.
+            </p>
+            <h3>Özellikler</h3>
+            <ul>
+                <li>Düşman karakterinin animasyonları</li>
+                <li>Ateş etme mekaniği</li>
+                <li>Kapalı ortam tasarımı</li>
+            </ul>
+            <!-- Carousel -->
+            <div id="carouselUnity3D" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/halflife1.png" class="d-block w-100" alt="Resim 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/halflife2.png" class="d-block w-100" alt="Resim 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/halflife3.png" class="d-block w-100" alt="Resim 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/halflife4.png" class="d-block w-100" alt="Resim 4">
+                    </div>
+                    <!-- Diğer resimler buraya eklenebilir -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnity3D"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselUnity3D"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+                <div class="text-center">
+                    <p>Daha geniş bilgi için</p>
+                    <a href="https://github.com/AhmetBerkeKaya/HalfLifeV3" class=" btn btn-secondary">Projeye Git</a>
+                    <a href="https://github.com/AhmetBerkeKaya/HalfLifeV3/blob/main/README.md"
+                        class="btn btn-secondary">Proje detayları için tıkla</a>
+                </div>
+            </div>
+        </div>
+        <!-- 2.proje -->
+        <div class="container mt-5">
+            <div class="project-box mb-5" id="mobil-proje-flutter">
+                <h2 class="text-center">FLUTTER YEMEK SİPARİŞİ UYGULAMASI</h2>
+                <p>
+                    Bu proje, flutter-dart kullanarak bir mobil uygulama geliştirmek üzere hazırlanmıştır. Belli
+                    animasyonlar ve sayfalar arası geçiş ile birlikte veri aktarımı bulunmaktadır. Web servis üzerinden
+                    veri çekimi , veri gönderimi mevcuttur.
+                </p>
+                <h3>Özellikler</h3>
+                <ul>
+                    <li>Kullanıcı dostu bir arayüz</li>
+                    <li>Webservis kullanımı</li>
+                    <li>Animasyon kullanımı</li>
+                    <li>BlocPattern mimarisi</li>
+                </ul>
+                <!-- Carousel -->
+                <div id="carouselFlutter" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/flutter1.png" class="d-block w-100" alt="Resim 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/flutter2.png" class="d-block w-100" alt="Resim 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/flutter3.png" class="d-block w-100" alt="Resim 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/flutter4.png" class="d-block w-100" alt="Resim 4">
+                        </div>
+                        <!-- Diğer resimler buraya eklenebilir -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFlutter"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Önceki</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFlutter"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sonraki</span>
+                    </button>
+                    <div class="text-center">
+                        <p>Daha geniş bilgi için</p>
+                        <a href="https://github.com/AhmetBerkeKaya/FoodOrderApp-FlutterDart"
+                            class=" btn btn-secondary">Projeye Git</a>
+                        <a href="https://github.com/AhmetBerkeKaya/FoodOrderApp-FlutterDart/blob/main/README.md"
+                            class="btn btn-secondary">Proje detayları için tıkla</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="project-box mb-5" id="yer-istasyonu">
+                    <h2 class="text-center">DRONE YER İSTASYONU UYGULAMASI</h2>
+                    <p>
+                        Biz, hem hava hem de kara aracı olarak çalışabilen bir drone için bir yer istasyonu yazılımı
+                        geliştirdik ve bu yazılımla TEKNOFEST'e katıldık. Bu yazılım, drone’un tüm operasyonel
+                        gereksinimlerini karşılamakta olup, verimli kontrol ve veri takibi sağlamaktadır.Bu proje, hava
+                        ve kara aracı olarak çalışabilen bir drone için özel bir yer istasyonu geliştirilmesini
+                        kapsamaktadır. Yer istasyonunun tüm tasarımı, Canva kullanılarak oluşturulmuş ve kullanıcı dostu
+                        bir arayüz sağlanmıştır.
+                    </p>
+                    <h3>Özellikler</h3>
+                    <ul>
+                        <li>Yer istasyonu arayüzü, Canva kullanılarak sıfırdan tasarlanmış ve özgün, sezgisel bir kullanıcı deneyimi sunulmuştur.</li>
+                        <li>Arayüze OpenStreetMap entegre edilerek drone’un konumunun gerçek zamanlı takibi sağlanmıştır. Harita verileri, gömülü bir HTML çözümüyle çekilip gösterilmiş ve uçuş operasyonları sırasında sorunsuz güncellemeler yapılmıştır.</li>
+                        <li>OpenWeatherMap API kullanılarak rüzgar hızı ve sıcaklık gibi gerçek zamanlı hava durumu verileri alınmış, bu sayede uçuş güvenliği ve operasyonel karar alma süreçleri desteklenmiştir.</li>
+                        <li>Alınan ve işlenen tüm veriler, Mission Planner kullanılarak doğrulanmış ve drone’un uçuş bilgileri ile hava durumu verilerinin güvenilirliği test edilmiştir.</li>
+                    </ul>
+                    <!-- Carousel -->
+                    <div id="carouselFlutter" class="carousel slide mt-4" data-bs-ride="carousel"
+                        data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/yeristasyonu.png" class="d-block w-100" alt="Resim 1">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFlutter"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Önceki</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFlutter"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Sonraki</span>
+                        </button>
+                        <div class="text-center">
+                            <p>Daha geniş bilgi için</p>
+                            <a href="https://github.com/AhmetBerkeKaya/Drone-GroundStation-Application"
+                                class=" btn btn-secondary">Projeye Git</a>
+                            <a href="https://github.com/AhmetBerkeKaya/Drone-GroundStation-Application/blob/main/README.md"
+                                class="btn btn-secondary">Proje detayları için tıkla</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3.proje -->
+                <div class="container mt-5">
+                    <div class="project-box mb-5" id="unity-proje">
+                        <h2 class="text-center">UNITY 2D PLATFORM OYUNU</h2>
+                        <p>
+                            Bu proje, pratik amaçlar için geliştirilmiş Unity tabanlı bir oyundur. Oyun mekaniği
+                            Mario'ya
+                            benzese de
+                            kendi ayırt edici özelliklerine sahiptir. Oyun, mevcut temel formunda daha fazla gelişime
+                            açık
+                            bırakılmış ve evrim geçirdikçe paylaşılacaktır.
+
+                            Hikaye
+                            Oyun, mevcut durumunda açıkça belirtilmemiş olsa da bir hikayeye sahiptir. Hikaye, bıyıklı
+                            bir
+                            karakterin hayal gücünden yaratıklarla yüzleşmesini konu alır ve bir çatışma yaratır. Hikaye
+                            henüz
+                            tam
+                            olarak geliştirilmediği için sonu değişebilir, ancak şu anda aşağıdaki gibi görünmektedir:
+                            Bıyıklı
+                            karakter, korkularını yenmek için bir şey kaybetmeden bir yolculuğa çıkar ve korktuğu
+                            yaratıkları
+                            yenerek. Sonunda, büyük macerasından sonra korkularını yendiğine inanır. Ayrıca, oyun küçük
+                            tuzaklar,
+                            zorlu parkurlar ve güçlü bir son-boss içeren üç farklı atmosfer sunar.
+                        </p>
+                        <h3>Özellikler</h3>
+                        <ul>
+                            <li>Bıyıklı bir karakterin hayal gücündeki yaratıklarla yüzleştiği bir hikaye.</li>
+                            <li>Proje geliştikçe ve evrim geçirdikçe paylaşıma açık.</li>
+                            <li>Mario'ya benzeyen ayırt edici oyun mekaniği.</li>
+                        </ul>
+                        <!-- Carousel -->
+                        <div id="carouselUnity" class="carousel slide mt-4" data-bs-ride="carousel"
+                            data-bs-interval="5000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/unityfoto1.jpg" class="d-block w-100" alt="Resim 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/unityfoto2.jpg" class="d-block w-100" alt="Resim 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/unityfoto3.jpg" class="d-block w-100" alt="Resim 3">
+                                </div>
+                                <!-- Diğer resimler buraya eklenebilir -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnity"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Önceki</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselUnity"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Sonraki</span>
+                            </button>
+                            <div class="text-center">
+                                <p>Daha geniş bilgi için</p>
+                                <a href="https://github.com/AhmetBerkeKaya/DarkThemeMario-Practice"
+                                    class=" btn btn-secondary">Projeye Git</a>
+                                <a href="https://github.com/AhmetBerkeKaya/DarkThemeMario-Practice/blob/main/README.md"
+                                    class="btn btn-secondary">Detaylı bilgi için tıkla</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4.Proje -->
+                    <div class="container mt-5">
+                        <div class="project-box mb-5" id="unity-proje-mobil">
+                            <h2 class="text-center">UNITY 3D MOBİL EŞLEŞTİRME OYUNU</h2>
+                            <p>
+                                Bu proje, pratik amaçlar için geliştirilmiş Unity tabanlı bir oyundur. Oyun başlar
+                                başlamaz
+                                ikişer adet aynı ürün bulunması ve farklı ürünlerinde bulunmasıyla aynı ürünleri
+                                eşleştirmeyi amaçlayan bir oyundur. Bir platform bulunmakta ve eşleşen ürünlerin oraya
+                                konulması gerekir.
+                            </p>
+                            <h3>Özellikler</h3>
+                            <ul>
+                                <li>Mobil oyun uygulaması</li>
+                                <li>Animasyon özelliği.</li>
+                                <li>Skor mekaniği</li>
+                            </ul>
+                            <!-- Carousel -->
+                            <div id="carouselUnity2dMobile" class="carousel slide mt-4" data-bs-ride="carousel"
+                                data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <video src="../img/mobiloyun.mp4" class="d-block w-100" alt="Video 1" controls>
+                                    </div>
+                                    <!-- Diğer resimler buraya eklenebilir -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselUnity"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Önceki</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselUnity"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Sonraki</span>
+                                </button>
+                                <div class="text-center">
+                                    <p>Daha geniş bilgi için</p>
+                                    <a href="https://github.com/AhmetBerkeKaya/bakircay-2024-gd-220601053"
+                                        class=" btn btn-secondary">Projeye Git</a>
+                                    <a href="https://github.com/AhmetBerkeKaya/bakircay-2024-gd-220601053/blob/main/README.md"
+                                        class="btn btn-secondary">Detaylı bilgi için tıkla</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 5.proje -->
+                        <div class="project-box mb-5" id="film-proje">
+                            <h2 class="text-center">FİLM KÜTÜPHANESİ SİSTEMİ UYGULAMASI</h2>
+                            <p>
+                                Bu uygulama, Nesneye Yönelik Programlama mantığı kullanılarak geliştirilen Film
+                                Kütüphanesi
+                                Sistemi'ni
+                                detaylı bir şekilde incelemekte ve raporlamaktadır.Proje, film yönetimi ve kullanıcı
+                                yönetimi gibi
+                                temel
+                                özellikleri barındırmaktadır. Aynı zamanda, farklı kullanıcı türlerinin
+                                (standart,premium)
+                                ve
+                                yöneticilerin sistemdeki rollerini içermektedir.</p>
+                            <h3>Temel Özellikler</h3>
+                            <p>
+                                Sistem, standart kullanıcılar, premium kullanıcılar ve yöneticiler arasında farklı
+                                rolleri
+                                içermektedir.
+                                Temel özellikler şunlardır:</p>
+                            <ul>
+                                <li>Standart kullanıcılar, film listelerine göz atabilir ve ücretsiz içeriklere
+                                    erişebilirler.</li>
+                                <li>Premium kullanıcılar, standart kullanıcıların sahip olduğu özelliklere ek olarak
+                                    premium
+                                    içeriklere(film değerlendirme,yorum yapma) erişim sağlarlar.</li>
+                                <li>Yöneticiler, kullanıcıları ve filmleri yönetebilir, yeni filmler ekleyebilir ve
+                                    sistemdeki
+                                    verilere
+                                    erişim sağlarlar.</li>
+                            </ul>
+                            <!-- Carousel -->
+                            <div id="carouselFilm" class="carousel slide mt-4" data-bs-ride="carousel"
+                                data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/filmkutuphane1.png" class="d-block w-100" alt="Resim 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/filmkutuphane2.png" class="d-block w-100" alt="Resim 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/filmkutuphane3.png" class="d-block w-100" alt="Resim 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/filmkutuphane4.png" class="d-block w-100" alt="Resim 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/filmkutuphane5.png" class="d-block w-100" alt="Resim 5">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/filmkutuphane6.png" class="d-block w-100" alt="Resim 6">
+                                    </div>
+                                    <!-- Diğer resimler buraya eklenebilir -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFilm"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Önceki</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFilm"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Sonraki</span>
+                                </button>
+                                <div class="text-center">
+                                    <p>Daha geniş bilgi için</p>
+                                    <a href="https://github.com/AhmetBerkeKaya/FilmLibraryProgram"
+                                        class=" btn btn-secondary">Projeye
+                                        Git</a>
+                                    <a href="https://github.com/AhmetBerkeKaya/FilmLibraryProgram/blob/main/220601032_DonemOdevi_Rapor.pdf"
+                                        class="btn btn-secondary">Raporu İndir (Proje 2)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3.Proje -->
+                    <div class="container mt-5">
+                        <div class="project-box mb-5" id="alan-cevre-proje">
+                            <h2 class="text-center">ŞEKLİN ALAN-ÇEVRE BİLGİLERİNİ HESAPLAYIP ÇİZEN PROGRAM</h2>
+                            <p>
+                                Taban algoritma, kullanıcıdan şekil bilgilerini giriş olarak alıp, bu bilgilerle hem
+                                veritabanında
+                                bir
+                                liste
+                                oluşturup hem de çizimleri görsel olarak sunan bir program içeriyor. Program,
+                                Dikdörtgen,
+                                Daire ve
+                                Eşkenar
+                                Üçgen şekillerini desteklemektedir. Ayrıca her bir şeklin çevresi ve alanı
+                                hesaplanmaktadır.
+                            </p>
+                            <h3>Notlar</h3>
+                            <ul>
+                                <li>Kullanıcı girişi doğrulaması ve hata yönetimi için IsInputValid metodu kullanılır.
+                                </li>
+                                <li>Gerekli giriş bilgilerinin eksiksiz sağlanmadığı durumlarda uyarı mesajları
+                                    gösterilir.
+                                </li>
+                                <li>Çizimler ve analiz bilgileri, kullanıcının seçtiği renk ve şekle uygun şekilde
+                                    yapılır.
+                                </li>
+                                <li>PictureBox ve ListView üzerindeki veriler temizlenerek yeniden kullanıma hazır hale
+                                    getirilebilir.
+                                </li>
+                            </ul>
+                            <!-- Carousel -->
+                            <div id="carouselAlanCevre" class="carousel slide mt-4" data-bs-ride="carousel"
+                                data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/alancevre1.png" class="d-block w-100" alt="Resim 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/alancevre2.png" class="d-block w-100" alt="Resim 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/alancevre3.png" class="d-block w-100" alt="Resim 3">
+                                    </div>
+                                </div>
+                                <!-- Carousel Kontrol Düğmeleri -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlanCevre"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Önceki</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselAlanCevre"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Sonraki</span>
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <p>Daha geniş bilgi için</p>
+                                <a href="https://github.com/AhmetBerkeKaya/A-simple-windows-form-application-that-draws-shapes"
+                                    class=" btn btn-secondary">Projeye Git</a>
+                                <a href="../rapors/proje3.pdf" class="btn btn-secondary">Raporu İndir (Proje 3)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4.Proje -->
+                    <div class="container mt-5">
+                        <div class="project-box mb-5" id="hasta-kayit-proje">
+                            <h2 class="text-center">VERİTABANINA KAYDEDEN HASTA KAYIT UYGULAMASI</h2>
+                            <p>
+                                Bu C# Windows Forms uygulaması, hasta kayıtlarını yönetmek ve veritabanı
+                                işlemlerini gerçekleştirmek amacıyla tasarlanmıştır. Uygulama, kullanıcıya hasta
+                                bilgilerini
+                                listeleme, ekleme, güncelleme ve silme gibi temel işlemleri gerçekleştirme imkanı sunar.
+                                Ayrıca, kullanıcı dostu bir arayüz ve veri güncellemelerini dinamik olarak yönetebilen
+                                bir
+                                DataGridView içermektedir. </p>
+                            <h3>Notlar</h3>
+                            <ul>
+                                <li>Veritabanı işlemleri sırasında oluşabilecek hataları yakalamak ve göstermek
+                                    için fazlaca işlem uygulanmıştır.</li>
+                                <li>Herhangi bir bilgi girilmediğinde tekrar sorulmasına karşın, verilen cevaba
+                                    göre işlem yapılmakta.</li>
+                                <li>Kod, farklı işlevleri farklı metotlara ayırarak modüler bir yapı izler.</li>
+                                <li>Form, çeşitli işlemler için çeşitli düğmeler ve hasta kayıtlarını görüntülemek ,
+                                    işlemek için DataGridView kullanılmıştır
+                                </li>
+                            </ul>
+                            <!-- Carousel -->
+                            <div id="carouselHastaKayit" class="carousel slide mt-4" data-bs-ride="carousel"
+                                data-bs-interval="5000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/hastakayit1.png" class="d-block w-100" alt="Resim 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/hastakayit2.png" class="d-block w-100" alt="Resim 2">
+                                    </div>
+                                </div>
+                                <!-- Carousel Kontrol Düğmeleri -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHastaKayit"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Önceki</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselHastaKayit"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Sonraki</span>
+                                </button>
+                            </div>
+                            <div class="text-center">
+                                <p>Daha geniş bilgi için</p>
+                                <a href="github.com/AhmetBerkeKaya/Patient-registration-system-program"
+                                    class=" btn btn-secondary">Projeye Git</a>
+                                <a href="../rapors/proje4.docx" class="btn btn-secondary">Raporu İndir (Proje 4)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer py-3 text-white fixed-bottom">
+                        <div class="container text-center">
+                            <span class="text-muted">© 2025 Ahmet Berke Kaya</span>
+                        </div>
+                    </footer>
+
+                    <!-- Bootstrap JS ve Popper.js -->
+
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
